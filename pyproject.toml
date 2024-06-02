@@ -6,3 +6,6 @@ description = "TelegramMessenger helps send telegram messages."
 readme = "README.md"
 authors = [{ name = "Poushsaat" }]
 license = { file = "LICENSE" }
+dependencies = [
+    "requests"
+]
