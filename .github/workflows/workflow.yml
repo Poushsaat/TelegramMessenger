@@ -7,13 +7,12 @@ jobs:
   pypi-publish:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
-    env:
-       TOKEN: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
     environment:
       name: pypi
       url: https://pypi.org/p/TelegramMessenger
     permissions:
-      id-token: $TOKEN
+      id-token: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+      
     steps:
     # retrieve your distributions here
     - name: Publish package distributions to PyPI
